@@ -12,7 +12,7 @@
 }
 
 #bannerDiv>img {
-    width: 100%;
+    width: 95%;
 }
 
 #appointmentDiv {
@@ -30,6 +30,7 @@
     /* border: 1px solid black; */
     display: block;
     margin: auto;
+    margin-bottom: 2%;
     align-items: center;
 }
 
@@ -37,17 +38,42 @@ form {
     display: grid;
     width: 60%;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 form input , form select {
-    padding: 3%;
+    padding: 4%;
     font-size: 1.2rem;
     /* margin: 3px; */
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     outline: none;
     border: 1px solid black;
     /* border: none; */
+}
+
+#emailId{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 1px solid black;
+}
+
+#form > div{
+    position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#form >div> p{
+    position: absolute;
+    right: 4%;
+    top: 30%;
+    color: red;
+    font-weight: bold;
 }
 
 form select{
@@ -65,12 +91,18 @@ form > div{
 }
 
 form > button{
-    padding: 3%;
+    padding: 4%;
     background-color: #454545;
     color: white;
     font-size: 1.1rem;
     border: none;
+    transition: 0.5s linear;
 }
+form > button:hover{
+    background-color: #1c1111;
+}
+
+
 
 
 @media screen and (max-width:800px) {
