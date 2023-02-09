@@ -1,0 +1,37 @@
+1.What will be your approach to solving this issue? Explain your strategy and approach to
+this.
+
+Answer :- As I Know Task 1 has low priority and also go live date for this task is not given, On The Other hand we Have Task 2 which as go live date is in 2 days also has more priority ,So I will contact to Task 2 customer and first of all ,I will apoligize for delay in work. and make him understand about my situation and at the end i will assure him that his work will get Completed till next date(Any Suitable Date after 3 days).After that i will also contant to Task 1 customer and also ask him that what will be his go live date . If his go live date is within 3 days then i will ask him to postpone that by explaining my critical situation to him . And if go live date is after 3 days i will also assure him that you task will get completed before that day. 
+
+
+2.How will you inform the 2 separate account managers of both customers about your
+approach? Write an internal message informing Manoj (Account manager for Task 1) &
+Ravi (Account Manager for Task 2) about your respective approach.
+
+
+Answer :- Below Message is For Both Manager.
+
+Hello Manoj/Ravi 
+I hope you are doing well , I am sending you this message to inform you that i will not able to continue work on the task of the Customer for 3 days, whom you are managing due to sudden family emergency. I have also contacted to Customer and explained about my situation and gave him assurance for his work. But even i have talked to them , Can you please contact them and make him understand about this situation , You are are managing that customer for long time ,So you have good understanding about him , I am sure he will get more assurance if you will talk to him about this .
+Kindly Do this and sorry for this inconvenience.
+
+
+3.How will you communicate the delay of additional 3 days to the customer? (Write an
+email to the customer informing them about this).
+
+To 
+Customer Name
+
+Subject :- Request for Delay in Completion of Work.
+
+Dear Customer Name,
+I hope you are doing well, I'm writing to fill you in with the progress of your task , I've already started to work on it .But Due to some Family Emergency I will not able to Continue work on this task for 3 days. The task will completed by 3 more days from expected date. And I hope you will understand my situation. I assure you that you task will get Completed. 
+
+Kindly accept my appology and if you have any query feel free to contact me through email.
+
+
+Thanks
+Ankit Rana
+
+
+
