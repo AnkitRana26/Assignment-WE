@@ -4,6 +4,17 @@
 <head>
     <title>nunjucks</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.js"></script>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: wheat;
+        }
+        .answersDiv{
+            background-color: rgb(216, 212, 202);
+            padding: 5px;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -15,14 +26,15 @@
     var displayData = `
         
         
-        <h1 style="text-align:center">Questions given by Web Engage using NunJucks.</h1>
+        <h1 style="text-align:center">NunJucks Implementation.</h1>
 
         <br><br><br>
 
             
-    <h2 style="text-align:center">Q1. If Id is even print its respective name, username, email else print :-I'm Odd</h2>
+    <h2 >Q1. If Id is even print its respective name, username, email else print :-I'm Odd</h2>
 
             <br><br>
+            <div class='answersDiv'>
             <ul>    
                 {% for item in data %}   
                     {% if item.id%2==0  %}                    
@@ -32,23 +44,25 @@
                     {% endif %}           
                 {% endfor %}
             </ul>
-                      
+            </div>      
             <br>
             
-    <h2 style="text-align:center">Q2. From the shared sapmle data of array JSON, based on all id values get its respecive
+    <h2 >Q2. From the shared sapmle data of array JSON, based on all id values get its respecive
 address keys and values and print them.</h2>
 
             <br><br>
+            <div class='answersDiv'>
             <ul>
                 {% for item in data %}                                      
                         <li>street: {{ item.address.street }} , suite: {{item.address.suite}} , city: {{ item.address.city }} , city: {{ item.address.city }} , zipcode:  {{ item.address.zipcode }} , geo: lat-{{ item.address.geo.lat }} lang-{{item.address.geo.lng}} </li>                    
                                
                 {% endfor %}
             </ul>
-            
+            </div>
             <br>
-    <h2 style="text-align:center">Q3. If any email ends with .biz print its name with email values.</h2>
+    <h2 >Q3. If any email ends with .biz print its name with email values.</h2>
             <br> <br>
+            <div class='answersDiv'>
             <ul>
                 {% for item in data %}
                     {% if 
@@ -59,13 +73,14 @@ address keys and values and print them.</h2>
                             <li> name: {{item.name}} - email: {{item.email}}</li> 
                     {% endif %}
                 {% endfor %}
-             <ul>          
+             </ul>   
+             </div>       
             <br><br>
             
-    <h2 style="text-align:center">Q4. If city contains any of following "Aliyaview", "Howemouth", Gwenborough print its
+    <h2 >Q4. If city contains any of following "Aliyaview", "Howemouth", Gwenborough print its
 respective cityname, zipcode, Geo with lat and lang values.</h2>
             <br><br>              
-            
+            <div class='answersDiv'>
             <ul>
                 {% for item in data %}
                     {% if 
@@ -75,13 +90,14 @@ respective cityname, zipcode, Geo with lat and lang values.</h2>
                         <li>The Zipcode and Geo of cityname {{ item.address.city }} is: {{item.address.zipcode}} and lat: {{ item.address.geo.lat }} lang: {{ item.address.geo.lng }}</li>                  
                     {% endif %}            
                 {% endfor %}
-             <ul>
-            
+             </ul>
+            </div>
             <br><br>
             
-    <h2 style="text-align:center">Q5. Print CatchPhrase which will contain max 15 letters.</h2>
+    <h2>Q5. Print CatchPhrase which will contain max 15 letters.</h2>
                                                 
             <br><br>
+            <div class='answersDiv'>
             <ul>
                 {% for item in data %}
                     {% set phraseSplit =  item.company.catchPhrase.replace(" ","") %}
@@ -90,6 +106,7 @@ respective cityname, zipcode, Geo with lat and lang values.</h2>
                         {% endif %}
                 {% endfor %}               
             </ul>
+            </div>
                        
             
         `;
