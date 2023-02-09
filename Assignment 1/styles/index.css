@@ -36,7 +36,7 @@
 
 form {
     display: grid;
-    width: 60%;
+    width: 80%;
     margin: auto;
     margin-top: 4%;
 }
@@ -92,14 +92,14 @@ form > div{
 
 form > button{
     padding: 4%;
-    background-color: #454545;
+    background-color: black;
     color: white;
     font-size: 1.1rem;
     border: none;
     transition: 0.5s linear;
 }
 form > button:hover{
-    background-color: #1c1111;
+    background-color: #454545;
 }
 
 
