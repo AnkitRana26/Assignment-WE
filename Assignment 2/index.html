@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>nunjucks</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.js"></script>
+</head>
+
+<body>
+    <div id="renderDiv">
+
+    </div>
+</body>
+<script>
+    var displayData = `
+        
+        
+        <h1 style="text-align:center">Questions given by Web Engage using NunJucks.</h1>
+
+        <br><br><br>
+
+            
+    <h2 style="text-align:center">Q1. If Id is even print its respective name, username, email else print :-I'm Odd</h2>
+
+            <br><br>
+            <ul>    
+                {% for item in data %}   
+                    {% if item.id%2==0  %}                    
+                        <li> id: {{ item.id }} - name: {{item.name}} - email: {{item.email}}</li>
+                    {% else %}
+                        <li> I am Odd </li>
+                    {% endif %}           
+                {% endfor %}
+            </ul>
+                      
+            <br>
+            
+    <h2 style="text-align:center">Q2. From the shared sapmle data of array JSON, based on all id values get its respecive
+address keys and values and print them.</h2>
+
+            <br><br>
+            <ul>
+                {% for item in data %}                                      
+                        <li>street: {{ item.address.street }} , suite: {{item.address.suite}} , city: {{ item.address.city }} , city: {{ item.address.city }} , zipcode:  {{ item.address.zipcode }} , geo: lat-{{ item.address.geo.lat }} lang-{{item.address.geo.lng}} </li>                    
+                               
+                {% endfor %}
+            </ul>
+            
+            <br>
+    <h2 style="text-align:center">Q3. If any email ends with .biz print its name with email values.</h2>
+            <br> <br>
+            <ul>
+                {% for item in data %}
+                    {% if 
+                        item.email[item.email | length-4 ] === "." and 
+                        item.email[item.email | length-3 ] === "b" and 
+                        item.email[item.email | length-2 ] === "i" and 
+                        item.email[item.email | length-1 ] === "z" %} 
+                            <li> name: {{item.name}} - email: {{item.email}}</li> 
+                    {% endif %}
+                {% endfor %}
+             <ul>          
+            <br><br>
+            
+    <h2 style="text-align:center">Q4. If city contains any of following "Aliyaview", "Howemouth", Gwenborough print its
+respective cityname, zipcode, Geo with lat and lang values.</h2>
+            <br><br>              
+            
+            <ul>
+                {% for item in data %}
+                    {% if 
+                        item.address.city === "Aliyaview" or 
+                        item.address.city === "Howemouth" or 
+                        item.address.city === "Gwenborough"  %}                                  
+                        <li>The Zipcode and Geo of cityname {{ item.address.city }} is: {{item.address.zipcode}} and lat: {{ item.address.geo.lat }} lang: {{ item.address.geo.lng }}</li>                  
+                    {% endif %}            
+                {% endfor %}
+             <ul>
+            
+            <br><br>
+            
+    <h2 style="text-align:center">Q5. Print CatchPhrase which will contain max 15 letters.</h2>
+                                                
+            <br><br>
+            <ul>
+                {% for item in data %}
+                    {% set phraseSplit =  item.company.catchPhrase.replace(" ","") %}
+                        {% if phraseSplit | length <= 15 %}
+                            <li> {{item.company.catchPhrase}} </li>
+                        {% endif %}
+                {% endfor %}               
+            </ul>
+                       
+            
+        `;
+
+
+
+
+
+    async function showContent() {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await res.json();
+        return data;
+    }
+
+    showContent().then(res => {
+        const data = { data: res }
+        var renderData = nunjucks.renderString(displayData, data);
+        document.getElementById("renderDiv").innerHTML = renderData;
+    }).catch(err => {
+        console.log(err.message);
+    })
+
+</script>
+
+</html>

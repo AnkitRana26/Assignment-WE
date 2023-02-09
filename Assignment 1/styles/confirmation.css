@@ -1,0 +1,27 @@
+#confirmationDiv{
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    box-shadow: 0 0 2px grey;
+    border-radius: 5px;
+    padding: 5%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#confirmationDiv > h1{
+    color: rgb(71, 177, 108);
+    text-align: center;
+}
+
+#confirmationDiv > img{
+    width: 30%;
+}
+
+#confirmationDiv >h3{
+    color: blue;
+}
+
+#confirmationDiv > h3 > span{
+    color: skyblue;
+}

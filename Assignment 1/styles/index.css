@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#bannerDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#bannerDiv>img {
+    width: 100%;
+}
+
+#appointmentDiv {
+    text-align: center;
+    /* line-height: 100%; */
+    /* border: 1px solid black; */
+}
+
+#appointmentDiv>h1 {
+    font-size: 3rem;
+}
+
+#appointmentDiv>img {
+    width: 70%;
+    /* border: 1px solid black; */
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+form input , form select {
+    padding: 3%;
+    font-size: 1.2rem;
+    /* margin: 3px; */
+    margin-bottom: 5px;
+    outline: none;
+    border: 1px solid black;
+    /* border: none; */
+}
+
+form select{
+    border-right: none;
+}
+
+form > div> input{
+    border-left: none;
+
+}
+
+form > div{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+form > button{
+    padding: 3%;
+    background-color: #454545;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+}
+
+
+@media screen and (max-width:800px) {
+    #bannerDiv {
+        grid-template-columns: 1fr;
+        gap: 5%;
+    }
+    #form{
+        width: 90%;
+    }
+}
